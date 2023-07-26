@@ -355,7 +355,7 @@ if page_selection == "About Us":
                     st.image('resources/imgs/W.png')
                     st.write("<p style='text-align: center; font-size: 20px; font-family: cursive; '>Matsawela Phiri</p>", unsafe_allow_html=True)
                     st.write("<p style='text-align: center; font-size: 12px; '>Occupation: Full Stack Developer </p>", unsafe_allow_html=True)
-                    st.write("<p style='text-align: center; font-size: 12px; '>Current Favorite Movie:  </p>", unsafe_allow_html=True)
+                    st.write("<p style='text-align: center; font-size: 12px; '>Current Favorite Movie: I Still Believe </p>", unsafe_allow_html=True)
 					
                     with col2:
                         st.image('resources/imgs/w.png')
@@ -368,7 +368,7 @@ if page_selection == "About Us":
                             st.image('resources/imgs/w.png')
                             st.write("<p style='text-align: center; font-size: 20px; font-family: cursive; '>Matlala Nyama</p>", unsafe_allow_html=True)
                             st.write("<p style='text-align: center; font-size: 12px; '>Occupation: DevOps Engineer </p>", unsafe_allow_html=True)
-                            st.write("<p style='text-align: center; font-size: 12px; '>Current Favorite Movie:  </p>", unsafe_allow_html=True)
+                            st.write("<p style='text-align: center; font-size: 12px; '>Current Favorite Movie:  Avengers </p>", unsafe_allow_html=True)
                             st.write("")
                             st.write("")
 
