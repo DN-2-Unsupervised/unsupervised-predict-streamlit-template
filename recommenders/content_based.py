@@ -32,11 +32,10 @@ import os
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 # Importing data
 movies = pd.read_csv('resources/data/movies.csv', sep = ',')
-ratings = pd.read_csv('resources/data/ratings.csv')
 movies.dropna(inplace=True)
 
 def data_preprocessing(subset_size):
@@ -56,7 +55,7 @@ def data_preprocessing(subset_size):
     # Split genre data into individual words.
     movies['keyWords'] = movies['genres'].str.replace('|', ' ')
     # Subset of the data
-    movies_subset = movies[:subset_size]
+    movies_subset = movies.head(1000)
     return movies_subset
 
 # !! DO NOT CHANGE THIS FUNCTION SIGNATURE !!
@@ -80,9 +79,9 @@ def content_model(movie_list,top_n=10):
     """
     # Initializing the empty list of recommended movies
     recommended_movies = []
-    data = data_preprocessing(27000)
+    data = data_preprocessing(1000)
     # Instantiating and generating the count matrix
-    count_vec = CountVectorizer()
+    count_vec = TfidfVectorizer()
     count_matrix = count_vec.fit_transform(data['keyWords'])
     indices = pd.Series(data['title'])
     cosine_sim = cosine_similarity(count_matrix, count_matrix)
